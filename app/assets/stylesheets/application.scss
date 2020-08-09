@@ -16,6 +16,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+main {
+  margin-top: 70px; // header分の余白
+}
+
 label {
   display: block;
 }
