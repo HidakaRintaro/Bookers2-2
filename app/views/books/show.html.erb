@@ -8,11 +8,12 @@
 
   <div class="col-md-9">
     <h2>Book detail</h2>
-      <table>
+      <table class="table">
         <tr>
           <td>
             <%= link_to user_path(@book.user_id) do %>
               <%= attachment_image_tag @book.user, :profile_image, :fill, 50, 50, fallback:'no-image.jpg', size:'50x50' %>
+              <br>
               <%= @book.user.name %>
             <% end %>
           </td>
@@ -20,12 +21,12 @@
           <td><%= @book.body %></td>
           <% if @book.user == current_user %>
             <td>
-              <%= link_to 'Edit', edit_book_path(@book), class:'btn btn-success btn-xs' %>
+              <%= link_to 'Edit', edit_book_path(@book), class:'btn btn-success btn-sm' %>
             </td>
-              <%= link_to 'Destroy', book_path(@book), method: :delete, class:'btn btn-danger btn-xs' %>
             <td>
-          <% end %>
+              <%= link_to 'Destroy', book_path(@book), method: :delete, class:'btn btn-danger btn-sm' %>
           </td>
+          <% end %>
 
         </tr>
       </table>
