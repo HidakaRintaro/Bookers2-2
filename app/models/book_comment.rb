@@ -1,7 +1,4 @@
 class BookComment < ApplicationRecord
-  def create
-  end
-
-  def destroy
-  end
+  belongs_to :user
+  belongs_to :book
 end
